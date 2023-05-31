@@ -6,6 +6,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'androidx.navigation.safeargs.kotlin'
     id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -77,6 +78,10 @@ dependencies {
 
     //Step view
     implementation "com.shuhart.stepview:stepview:$stepview_version"
+
+    //Firebase
+    implementation "com.google.firebase:firebase-auth-ktx:$firebaseAuth_version"
+
 
     //Local Test
     testImplementation 'androidx.arch.core:core-testing:2.2.0'
