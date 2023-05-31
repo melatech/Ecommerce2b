@@ -61,7 +61,7 @@
     <dimen name="mediumButtonWidth">200dp</dimen>
     <dimen name="mediumButtonHeight">55dp</dimen>
 
-    <dimen name="button_corners">5dp</dimen>
+    <dimen name="button_corners">7dp</dimen>
     <dimen name="editTextHeight">60dp</dimen>
 
     <dimen name="h4TextSize">35sp</dimen>
