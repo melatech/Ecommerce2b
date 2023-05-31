@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "831189915113",
+    "project_id": "ecommerce2b-5e92d",
+    "storage_bucket": "ecommerce2b-5e92d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831189915113:android:61803d8aeed68677b72778",
+        "android_client_info": {
+          "package_name": "com.melatech.ecommerce2b"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi6VNYTtH-Ph9c5xYOiC431rYMjWQD69E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
