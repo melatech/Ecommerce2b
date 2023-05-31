@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Ecommerce2b"
         tools:targetApi="31">
         <activity
-            android:name=".ecommerce2b.ui.MainActivity"
+            android:name=".ecommerce2b.ui.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

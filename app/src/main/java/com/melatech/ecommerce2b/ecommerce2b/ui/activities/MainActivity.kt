@@ -1,4 +1,4 @@
-package com.melatech.ecommerce2b.ecommerce2b.ui
+package com.melatech.ecommerce2b.ecommerce2b.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
