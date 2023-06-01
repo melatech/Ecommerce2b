@@ -1,4 +1,8 @@
 package com.melatech.ecommerce2b
 
-class Ecommerce2bApplication {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class Ecommerce2bApplication: Application(){
 }
