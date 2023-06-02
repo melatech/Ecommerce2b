@@ -12,10 +12,13 @@ import com.melatech.ecommerce2b.R
 import com.melatech.ecommerce2b.data.User
 import com.melatech.ecommerce2b.databinding.FragmentRegisterBinding
 import com.melatech.ecommerce2b.ecommerce2b.ui.viewmodels.RegisterViewModel
+import com.melatech.ecommerce2b.util.RegisterValidation
 import com.melatech.ecommerce2b.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 const val TAG = "RegisterFragment"
 @AndroidEntryPoint
@@ -63,6 +66,30 @@ class RegisterFragment : Fragment() {
                             binding.buttonRegisterRegister.revertAnimation()
                         }
                         else -> Unit
+                    }
+                }
+            }
+        }
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+            launch {
+//            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {}
+                viewModel.validation.collect(){ validation ->
+                    if (validation.email is RegisterValidation.Failed){
+                        withContext(Main){
+                            binding.edEmailRegister.apply {
+                                requestFocus()
+                                error = validation.email.message
+                            }
+                        }
+                    }
+
+                    if (validation.password is RegisterValidation.Failed){
+                        withContext(Main){
+                            binding.edPasswordRegister.apply {
+                                requestFocus()
+                                error = validation.password.message
+                            }
+                        }
                     }
                 }
             }
