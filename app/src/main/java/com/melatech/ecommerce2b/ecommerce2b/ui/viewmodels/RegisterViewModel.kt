@@ -3,6 +3,7 @@ package com.melatech.ecommerce2b.ecommerce2b.ui.viewmodels
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
 import com.melatech.ecommerce2b.data.User
 import com.melatech.ecommerce2b.util.RegisterFieldsState
 import com.melatech.ecommerce2b.util.RegisterValidation
@@ -19,7 +20,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RegisterViewModel @Inject constructor(
-    private val firebaseAuth: FirebaseAuth
+    private val firebaseAuth: FirebaseAuth,
+    private val db: FirebaseFirestore,
 ) : ViewModel() {
     private val _register = MutableStateFlow<Resource<FirebaseUser>>(Resource.Unspecified())
     val register: Flow<Resource<FirebaseUser>> = _register
@@ -35,7 +37,8 @@ class RegisterViewModel @Inject constructor(
             firebaseAuth.createUserWithEmailAndPassword(user.email, password)
                 .addOnSuccessListener {
                     it.user?.let {
-                        _register.value = Resource.Success(it)
+                        //_register.value = Resource.Success(it)
+                        saveUserInfo(it)
                     }
                 }
                 .addOnFailureListener {
@@ -48,6 +51,12 @@ class RegisterViewModel @Inject constructor(
             )
             runBlocking { _validation.send(registerFieldsState) }
         }
+    }
+
+    private fun saveUserInfo(user: FirebaseUser) {
+        db.collection("user")
+
+
     }
 
     private fun checkValidation(user: User, password: String): Boolean {
