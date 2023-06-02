@@ -15,6 +15,7 @@ import com.melatech.ecommerce2b.ecommerce2b.ui.viewmodels.RegisterViewModel
 import com.melatech.ecommerce2b.util.RegisterValidation
 import com.melatech.ecommerce2b.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -50,7 +51,7 @@ class RegisterFragment : Fragment() {
         }
 
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
-            launch {
+            launch{
                 viewModel.register.collect{
                     when(it){
                         is Resource.Loading -> {
@@ -70,9 +71,9 @@ class RegisterFragment : Fragment() {
                 }
             }
         }
+    //  viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {}
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             launch {
-//            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {}
                 viewModel.validation.collect(){ validation ->
                     if (validation.email is RegisterValidation.Failed){
                         withContext(Main){
