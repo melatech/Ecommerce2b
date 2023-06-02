@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.melatech.ecommerce2b.R
 import com.melatech.ecommerce2b.databinding.FragmentLoginBinding
 import com.melatech.ecommerce2b.databinding.FragmentRegisterBinding
@@ -36,6 +37,10 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.tvDontHaveAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
 
         binding.apply {
             buttonLoginLogin.setOnClickListener {
