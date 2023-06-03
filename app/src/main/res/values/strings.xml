@@ -14,7 +14,7 @@
     <string name="content_texture_right">right texture image</string>
     <string name="letsLogIn">Let\'s Login</string>
     <string name="letsRegister">Let\'s Register</string>
-    <string name="resetPassword">Reset Password</string>
+    <string name="resetPassword">Enter Email Address</string>
     <string name="weWillSendYouPasswordLink">We will send you the password reset link to your email</string>
     <string name="g_see_product">See product</string>
     <string name="cancel">Cancel</string>
