@@ -93,11 +93,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:tabRippleColor="@color/white"
         app:tabSelectedTextColor="@color/black"
+
         app:tabMode="scrollable"
         app:tabTextAppearance="@style/tabLayout_text"
-
-
         />
+    <!--tab indicator-->
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagerHome"
