@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.melatech.ecommerce2b.R
 import com.melatech.ecommerce2b.databinding.FragmentMainCategoryBinding
 
-
 class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
     lateinit var binding: FragmentMainCategoryBinding
 
