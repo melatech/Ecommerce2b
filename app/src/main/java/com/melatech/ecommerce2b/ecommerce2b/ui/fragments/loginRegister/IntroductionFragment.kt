@@ -1,4 +1,4 @@
-package com.melatech.ecommerce2b.ecommerce2b.ui.fragments
+package com.melatech.ecommerce2b.ecommerce2b.ui.fragments.loginRegister
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.melatech.ecommerce2b.R
 import com.melatech.ecommerce2b.databinding.FragmentIntroductionBinding
-import com.melatech.ecommerce2b.databinding.FragmentRegisterBinding
 import com.melatech.ecommerce2b.ecommerce2b.ui.viewmodels.RegisterViewModel
 
 

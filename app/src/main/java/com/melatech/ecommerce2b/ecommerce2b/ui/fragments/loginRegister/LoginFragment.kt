@@ -1,4 +1,4 @@
-package com.melatech.ecommerce2b.ecommerce2b.ui.fragments
+package com.melatech.ecommerce2b.ecommerce2b.ui.fragments.loginRegister
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,11 +13,9 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.melatech.ecommerce2b.R
 import com.melatech.ecommerce2b.databinding.FragmentLoginBinding
-import com.melatech.ecommerce2b.databinding.FragmentRegisterBinding
 import com.melatech.ecommerce2b.ecommerce2b.ui.activities.ShoppingActivity
 import com.melatech.ecommerce2b.ecommerce2b.ui.dialogs.setUpBottomSheetDialog
 import com.melatech.ecommerce2b.ecommerce2b.ui.viewmodels.LoginViewModel
-import com.melatech.ecommerce2b.ecommerce2b.ui.viewmodels.RegisterViewModel
 import com.melatech.ecommerce2b.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch

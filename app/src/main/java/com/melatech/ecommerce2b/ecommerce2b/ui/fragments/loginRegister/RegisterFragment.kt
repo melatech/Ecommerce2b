@@ -1,4 +1,4 @@
-package com.melatech.ecommerce2b.ecommerce2b.ui.fragments
+package com.melatech.ecommerce2b.ecommerce2b.ui.fragments.loginRegister
 
 import android.os.Bundle
 import android.util.Log
@@ -16,9 +16,7 @@ import com.melatech.ecommerce2b.ecommerce2b.ui.viewmodels.RegisterViewModel
 import com.melatech.ecommerce2b.util.RegisterValidation
 import com.melatech.ecommerce2b.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 

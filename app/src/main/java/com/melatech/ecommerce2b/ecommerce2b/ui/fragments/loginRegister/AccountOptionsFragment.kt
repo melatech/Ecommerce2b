@@ -1,4 +1,4 @@
-package com.melatech.ecommerce2b.ecommerce2b.ui.fragments
+package com.melatech.ecommerce2b.ecommerce2b.ui.fragments.loginRegister
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
