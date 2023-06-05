@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:text="$2000"
             app:layout_constraintTop_toBottomOf="@id/tv_deal_product_name"
-            app:layout_constraintStart_toEndOf="@id/tv_new_price"
+            app:layout_constraintStart_toEndOf="@id/tvSpecialProductPrice"
             android:textColor="@color/g_hint"
             android:textSize="@dimen/_12ssp"
             android:fontFamily="@font/sf_pro_display"
@@ -49,7 +49,7 @@
             />
 
         <TextView
-            android:id="@+id/tv_new_price"
+            android:id="@+id/tvSpecialProductPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$1600"
