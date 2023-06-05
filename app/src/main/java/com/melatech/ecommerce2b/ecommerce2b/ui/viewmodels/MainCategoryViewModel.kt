@@ -14,8 +14,11 @@ class MainCategoryViewModel @Inject constructor(
     private val firestore: FirebaseFirestore
 ): ViewModel() {
 
+    //Test
+
     private val _specialProducts = MutableStateFlow<Resource<List<Product>>>(Resource.Unspecified())
     val specialProducts: StateFlow<Resource<List<Product>>> = _specialProducts
+
 
 
 }
